@@ -40,6 +40,8 @@
     <script>
         var display = document.getElementById("displayID");
         var operator = "";
+        var firstNumber = "";
+        var helper="";
 
         function btn_AC() {
             display.innerHTML = "0";
@@ -54,31 +56,71 @@
             }
         }
         function btn_Mod(){
-
+            btn_Equals();
+            operator = "%";
+            firstNumber = display.innerHTML;
+            display.innerHTML = "0";
         }
 
         function btn_Div(){
-
+            btn_Equals();
+            operator = "/";
+            firstNumber = display.innerHTML;
+            display.innerHTML = "0";
         }
 
         function btn_Mul(){
-
+            btn_Equals();
+            operator = "x";
+            firstNumber = display.innerHTML;
+            display.innerHTML = "0";
         }
 
         function btn_Sub(){
-
+            btn_Equals();
+            operator = "-";
+            firstNumber = display.innerHTML;
+            display.innerHTML = "0";
         }
 
         function btn_Add(){
-
+            btn_Equals();
+            operator = "+";
+            firstNumber = display.innerHTML;
+            display.innerHTML = "0";
         }
 
-        function btn_Equal(){
-
+        function btn_Equals(){
+            if(operator!="")
+            {
+                var secondNumber = display.innerHTML;
+                var result = 0;
+                if(operator=="+"){
+                    result = parseFloat(firstNumber) + parseFloat(secondNumber);
+                }
+                if(operator=="-"){
+                    result = parseFloat(firstNumber) - parseFloat(secondNumber);
+                }
+                if(operator=="x"){
+                    result = parseFloat(firstNumber) * parseFloat(secondNumber);
+                }
+                if(operator=="/"){
+                    result = parseFloat(firstNumber) / parseFloat(secondNumber);
+                }
+                if(operator=="%"){
+                    result = parseFloat(firstNumber) % parseFloat(secondNumber);
+                }
+                display.innerHTML = result;
+                helper="1";
+                operator = "";
+                firstNumber = "";
+            }
         }
 
         function btn_Dot(){
-            display.innerHTML += ".";
+            if(!findPoint(display.innerHTML)){
+                display.innerHTML += ".";
+            }
         }
 
         function btn_0(){
@@ -89,6 +131,10 @@
         }
 
         function btn_1(){
+            if(helper=="1"){
+                display.innerHTML="";
+                helper="";
+            }
             if(display.innerHTML=="0"){
                 display.innerHTML="";
             }
@@ -96,6 +142,10 @@
         }
 
         function btn_2(){
+            if(helper=="1"){
+                display.innerHTML="";
+                helper="";
+            }
             if(display.innerHTML=="0"){
                 display.innerHTML="";
             }
@@ -103,6 +153,10 @@
         }
 
         function btn_3(){
+            if(helper=="1"){
+                display.innerHTML="";
+                helper="";
+            }
             if(display.innerHTML=="0"){
                 display.innerHTML="";
             }
@@ -110,6 +164,10 @@
         }
 
         function btn_4(){
+            if(helper=="1"){
+                display.innerHTML="";
+                helper="";
+            }
             if(display.innerHTML=="0"){
                 display.innerHTML="";
             }
@@ -117,6 +175,10 @@
         }
 
         function btn_5(){
+            if(helper=="1"){
+                display.innerHTML="";
+                helper="";
+            }
             if(display.innerHTML=="0"){
                 display.innerHTML="";
             }
@@ -124,6 +186,10 @@
         }
 
         function btn_6(){
+            if(helper=="1"){
+                display.innerHTML="";
+                helper="";
+            }
             if(display.innerHTML=="0"){
                 display.innerHTML="";
             }
@@ -131,6 +197,10 @@
         }
 
         function btn_7(){
+            if(helper=="1"){
+                display.innerHTML="";
+                helper="";
+            }
             if(display.innerHTML=="0"){
                 display.innerHTML="";
             }
@@ -138,6 +208,10 @@
         }
 
         function btn_8(){
+            if(helper=="1"){
+                display.innerHTML="";
+                helper="";
+            }
             if(display.innerHTML=="0"){
                 display.innerHTML="";
             }
@@ -145,6 +219,10 @@
         }
 
         function btn_9(){
+            if(helper=="1"){
+                display.innerHTML="";
+                helper="";
+            }
             if(display.innerHTML=="0"){
                 display.innerHTML="";
             }

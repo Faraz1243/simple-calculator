@@ -28,7 +28,7 @@ body{
     background-color: var(--white);
     /* background-color: #23323E; */
     justify-content: center;
-    align-items: center;
+    align-items: center;box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 .display{
     width: 20rem;
@@ -70,7 +70,7 @@ body{
     color: #ddd;
 } */
 .btn:active{
-    width: 3.4rem;
+    /* width: 3.4rem; */
     height: 2.8rem;
-    margin-right: 0.5rem;
+    /* margin-right: 0.5rem; */
 }
