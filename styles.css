@@ -79,3 +79,6 @@ body{
     /* background-color: #000; */
     color:var(--orange)
 }
+.refer{
+    text-align: right;
+}
